@@ -5,10 +5,7 @@ function getWeather() {
     return;
   }
 
-  // fetch(`http://kksharma.free.nf/backend.php?city=${city}`) // Use HTTP instead of HTTPS
-  fetch(
-    `https://corsproxy.io/?https://kksharma.free.nf/backend.php?city=${city}`
-  )
+  fetch(`https://kksharma.free.nf/backend.php?city=${city}`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
